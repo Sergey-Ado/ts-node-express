@@ -9,7 +9,7 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "nodemon --watch",
-    "lint": "eslint src/**/*",
+    "lint": "eslint .",
     "start:dev": "tsx watch ./src/server.js"
   },
   "repository": {
