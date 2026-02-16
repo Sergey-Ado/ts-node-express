@@ -13,7 +13,4 @@ app.post('/', (req: Request, res: Response) => {
   res.status(201).json(body);
 });
 
-const a;
-const b;
-
 export default app;
