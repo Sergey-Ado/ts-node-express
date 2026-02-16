@@ -1,0 +1,42 @@
+{
+  "name": "ts-node-express",
+  "version": "1.0.0",
+  "description": "ts-node-express",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon --watch",
+    "lint": "eslint src/**/*",
+    "start:dev": "tsx watch ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sergey-Ado/ts-node-express.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sergey-Ado/ts-node-express/issues"
+  },
+  "homepage": "https://github.com/Sergey-Ado/ts-node-express#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.2.3",
+    "dotenv": "^17.3.1",
+    "eslint": "^10.0.0",
+    "express": "^5.2.1",
+    "globals": "^17.3.0",
+    "install": "^0.13.0",
+    "nodemon": "^3.1.11",
+    "npm": "^11.10.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.56.0"
+  }
+}
