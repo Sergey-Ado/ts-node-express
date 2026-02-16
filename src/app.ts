@@ -14,6 +14,5 @@ app.post('/', (req: Request, res: Response) => {
 });
 
 const a;
-const b;
 
 export default app;
