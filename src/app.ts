@@ -14,7 +14,7 @@ app.use(express.json());
 
 app.get('/', (req: Request, res: Response) => {
   // res.sendFile(join(__dirname, 'index.html'));
-  res.send('Hello');
+  res.send('Hello!!!');
 });
 
 io.on('connection', (socket) => {
