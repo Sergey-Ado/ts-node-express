@@ -7,10 +7,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "node dist/server.js",
-    "dev": "nodemon --watch",
+    "start": "node dist/index.js",
     "lint": "eslint ./src",
-    "start:dev": "tsx watch ./src/server.js"
+    "dev": "tsx watch ./src/index.js"
   },
   "repository": {
     "type": "git",
@@ -32,11 +31,13 @@
     "express": "^5.2.1",
     "globals": "^17.3.0",
     "install": "^0.13.0",
-    "nodemon": "^3.1.11",
     "npm": "^11.10.0",
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.0"
+  },
+  "dependencies": {
+    "socket.io": "^4.8.3"
   }
 }

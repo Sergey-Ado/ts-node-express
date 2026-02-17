@@ -1,11 +1,26 @@
 import express, { type Request, type Response } from 'express';
+import { createServer } from 'node:http';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { Server } from 'socket.io';
 
 const app = express();
+const server = createServer(app);
+const io = new Server(server);
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 app.use(express.json());
 
 app.get('/', (req: Request, res: Response) => {
-  res.json('Hello');
+  res.sendFile(join(__dirname, 'index.html'));
+});
+
+io.on('connection', (socket) => {
+  console.log('a user connected');
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
+  });
 });
 
 app.post('/', (req: Request, res: Response) => {
@@ -13,4 +28,4 @@ app.post('/', (req: Request, res: Response) => {
   res.status(201).json(body);
 });
 
-export default app;
+export default server;
