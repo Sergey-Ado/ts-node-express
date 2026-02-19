@@ -1,5 +1,9 @@
+export interface InputItem {
+  name: string;
+}
+
 export interface Item {
-  id: number;
+  id: string;
   name: string;
 }
 
