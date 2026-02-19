@@ -14,7 +14,10 @@
     "dev": "tsx watch ./src/index.js",
     "start:deploy": "node index.js",
     "start:deploy2": "node ../dist/index.js",
-    "start:deploy3": "node ../dist/src/index.js"
+    "start:deploy3": "node ../dist/src/index.js",
+    "start:deploy4": "node ./dist/index.js",
+    "start:deploy5": "node ./dist/src/index.js",
+    "start:deploy6": "node ./src/index.js"
   },
   "repository": {
     "type": "git",
