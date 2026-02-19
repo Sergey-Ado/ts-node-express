@@ -13,7 +13,8 @@
     "lint": "eslint ./src",
     "dev": "tsx watch ./src/index.js",
     "start:deploy": "node index.js",
-    "start:deploy2": "node ../dist/index.js"
+    "start:deploy2": "node ../dist/index.js",
+    "start:deploy3": "node ../dist/src/index.js"
   },
   "repository": {
     "type": "git",
