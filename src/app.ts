@@ -80,4 +80,26 @@ app.post('/', (req: Request, res: Response) => {
   res.status(201).json(body);
 });
 
+app.post('/posts', async (req: Request, res: Response) => {
+  const body: unknown = req.body;
+  const inputItem = parserInputItem(body);
+  if (inputItem) {
+    const id = uuid();
+    const newUser = await prisma.user.create({
+      data: {
+        id,
+        name: inputItem.name,
+      },
+    });
+    res.json(newUser);
+  } else {
+    res.sendStatus(204);
+  }
+});
+
+app.get('/posts', async (req: Request, res: Response) => {
+  const users = await prisma.user.findMany();
+  res.json(users);
+});
+
 export default server;
